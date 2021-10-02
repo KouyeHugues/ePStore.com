@@ -5,7 +5,7 @@
 Start server : `npm dev`
 _____________________________
 
-### Configiration :
+### Configuration :
 
 * Put your cluster info inside `/config/db.js`
 * Create `.env` file inside `/config/` within the following data
