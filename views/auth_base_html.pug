@@ -1,0 +1,33 @@
+extends base_html.pug
+
+
+block style 
+  link(rel="stylesheet" href='/themes/back/vendors/feather/feather.css')
+  link(rel="stylesheet" href='/themes/back/vendors/ti-icons/css/themify-icons.css')
+  link(rel="stylesheet" href='/themes/back/vendors/css/vendor.bundle.base.css')
+  link(rel="stylesheet" href='/themes/back/css/vertical-layout-light/style.css')
+  link(rel="stylesheet" href='/themes/back/vendors/mdi/css/materialdesignicons.min.css')
+
+
+
+block bodycontent
+  <div class="container-scroller">
+  <div class="container-fluid page-body-wrapper full-page-wrapper">
+    <div class="content-wrapper d-flex align-items-center auth px-0">
+      <div class="row w-100 mx-0">
+        <div class="col-lg-4 mx-auto">
+          <div class="auth-form-light text-center py-5 px-4 px-sm-5">
+            block content 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+block scripts 
+  script(src='themes/back/js/off-canvas.js')
+  script(src='themes/back/js/hoverable-collapse.js')
+  script(src='themes/back/js/template.js')
+

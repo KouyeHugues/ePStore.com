@@ -1,0 +1,78 @@
+extends ../backend_base_html.pug
+
+block content
+    .row
+        div(class ='col-lg-12 grid-margin stretch-card')
+            .card
+                .card-body
+                    h4.card-title Les applications
+                        p.card-description Table des applications ajoutés sur le site.
+                            .template-demo
+                                div(class='btn-group col-12" role="group" aria-label="Basic example')
+                                    .text-center
+                                        a(href="/applications/index/new" class="btn btn-info my-4") 
+                                            i(class='mdi mdi-keyboard-return') Ajouter une nouvelle application
+                    .table-responsive
+                        table(class = "table table-bordered")
+                            thead 
+                                tr 
+                                    th ID
+                                    th Titre
+                                    th Nom du code
+                                    th Lien
+                                    th Vues
+                                    th Description
+                                    th Auteur
+                                    th Qualité
+                                    th Catégorie
+                                    th Mentor
+                                    th Photo
+                                    th Télécharger
+                                    th Visités
+                                    th Date d'ajout
+                                    th Date de modification
+                                    th Commentaires
+                                    th Modifier
+                                    th Suppression
+                            tbody 
+                            for application in docs
+                                tr 
+                                    td= application._id
+                                    td= application.title
+                                    td= application.codeName
+                                    td
+                                        a(href= application.link, target="_blank")= application.link
+                                    td= application.viewed ? application.viewed.length : ""
+                                    td= application.description
+                                    td= application.author
+                                    td= application.quality
+                                    td= application.category
+                                    td= application.mentor
+                                    td
+                                        img.image(src='/' + application.screenshot )
+                                    td
+                                        a(href= application.download, target="_blank")= application.download
+                                    td= application.visitor ? application.visitor.length : ""
+                                    td= application.createdAt
+                                    td= application.updatedAt
+                                    td= application.comments ? application.comments.length : ""
+                                    td 
+                                        a(class="btn btn-outline-warning mt-auto" href="/applications/update/index/" + application._id) Modifier
+                                    td 
+                                        a(class="btn btn-outline-danger mt-auto" href="/applications/delete/index/" + application._id) Supprimer
+                            else 
+                                tr
+                                    td(colspan="18") Aucune application trouvée
+                                    
+
+
+
+
+
+
+
+
+
+
+
+

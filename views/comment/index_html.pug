@@ -1,0 +1,48 @@
+extends ../backend_base_html.pug
+
+block content
+    .row
+        div(class ='col-lg-12 grid-margin stretch-card')
+            .card
+                .card-body
+                    h4.card-title Les utilisateurs
+                        p.card-description Table des utilisateurs inscrits sur le site.
+                            .template-demo
+                                div(class='btn-group col-12" role="group" aria-label="Basic example')
+                                    .text-center
+                                        a(href="" class="btn btn-info my-4") 
+                                            i(class='mdi mdi-keyboard-return') Ajouter un nouveau commentaire
+                    .table-responsive
+                        table(class = "table table-bordered")
+                            thead 
+                                tr 
+                                    th ID
+                                    th Pseudo
+                                    th Message
+                                    th Voir
+                                    th Modifier
+                                    th Suppression
+                            tbody 
+                            for comment in comments
+                                tr 
+                                    td= comment._id
+                                    td= comment.commentPseudo
+                                    td= comment.message
+                                    td 
+                                        a(class="btn btn-outline-success mt-auto" href="/applications/comment/" + comment._id) Voir
+                                    td 
+                                        a(class="btn btn-outline-warning mt-auto" href="/applications/edit-comment/" + comment._id) Modifier
+                                    td 
+                                        a(class="btn btn-outline-danger mt-auto" href="/applications/delete-comment/" + comment._id) Supprimer
+                            else 
+                                tr
+                                    td(colspan="5") Aucun utilisateur trouvé
+                                    
+
+
+
+
+
+
+
+

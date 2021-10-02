@@ -1,0 +1,23 @@
+extends ../auth_base_html.pug
+
+
+block content
+
+    
+    form(action="#" method="POST") 
+        h3.text-center S'inscrire
+        .mb-3 
+            label(for="formGroupExampleInput" class="form-label") Nom et prénom
+            input(type="text" name="fullName" class="form-control" id="formGroupExampleInput" placeholder="Ex: Hugues Kouye")
+
+        .mb-3 
+            label(for="formGroupExampleInput" class="form-label") Email
+            input(type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Email")
+
+        .mb-3 
+            label(for="formGroupExampleInput" class="form-label") Mot de passe
+            input(type="password" name="password" class="form-control" id="formGroupExampleInput" placeholder="Mot de passe")
+
+        button(type="submit").btn.btn-block.btn-primary.btn-lg.font-weight-medium.auth-form-btn S'inscrire
+
+

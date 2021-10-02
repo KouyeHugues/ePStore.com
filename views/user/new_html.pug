@@ -1,0 +1,23 @@
+extends ../backend_base_html.pug
+
+
+block content
+    .col-md-12.grid-margin.stretch-card
+        .card
+            .card-body
+                h4.card-title Nouvel utilisateur
+                    form(action="#" method="POST").my-3
+                        .mb-3 
+                            label(for="formGroupExampleInput" class="form-label") Nom et prénom
+                            input(type="text" name="fullName" class="form-control" id="formGroupExampleInput" placeholder="Ex: Hugues Kouye")
+
+                        .mb-3 
+                            label(for="formGroupExampleInput" class="form-label") Email
+                            input(type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Email")
+
+                        .mb-3 
+                            label(for="formGroupExampleInput" class="form-label") Password
+                            input(type="password" name="password" class="form-control" id="formGroupExampleInput" placeholder="Mot de passe")
+
+                        button(type="submit").btn.btn-block.btn-primary.btn-lg.font-weight-medium.auth-form-btn Ajouter 
+

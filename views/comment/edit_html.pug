@@ -1,0 +1,21 @@
+extends ../backend_base_html.pug
+
+
+block content
+    .col-md-12.grid-margin.stretch-card
+        .card
+            .card-body
+                h4.card-title Modifier
+                    form(action="#" method="POST").my-3
+                        .row
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label  Pseudo
+                                    input(type="text" name="commentPseudo" class="form-control" id="formGroupExampleInput" placeholder="Titre")
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Commentaire
+                                    input(type="text" name="message" class="form-control" id="formGroupExampleInput" placeholder="Nom du code")
+                            .col-lg-4
+                            
+                        button(type="submit").btn.btn-block.btn-primary.btn-lg.font-weight-medium.auth-form-btn Commenter

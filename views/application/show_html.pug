@@ -1,0 +1,34 @@
+extends ../frontend_base_html.pug
+
+
+block content
+    div(class="col mb-5")
+        div(class="card h-100")
+            div.text-center
+                h5.fw-bolder= docs.title
+            img.image(src='/' + docs.screenshot )
+            div(class="card-body p-2")
+                div.text-center 
+                    h6.fw-bolder Auteur:
+                        h5.bad= docs.author
+                        div(class="card-footer p-4 pt-0 border-top-0 bg-transparent")
+    div(class="col mb-5")
+        div(class="card h-100")
+            div(class="row col-12")
+            div.text-center
+                h5.fw-bolder Description:
+                    p= docs.description
+            div(class="card-body p-2")
+                div.text-center 
+                    h5 Mentor:
+                        p= docs.mentor
+                    h5.fw-bolder Vues:
+                        p= docs.viewed.length
+                    h5.fw-bolder  Nombre de visites/téléchargement:
+                        p= docs.visitor.length
+                    h5.fw-bolder Visité/Télécharger:
+                        a(href= docs.download, target="_blank")= docs.download
+//-a(class="btn btn-outline-warning mt-auto" href="/applications/comment-appl/" + docs._id) Laisser un commentaire
+//- h5.fw-bolder Date d'ajout:
+//-     p= docs.createdAt
+//-     div(class="card-footer p-4 pt-0 border-top-0 bg-transparent")

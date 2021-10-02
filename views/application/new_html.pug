@@ -1,0 +1,58 @@
+extends ../backend_base_html.pug
+
+
+block content
+    .col-md-12.grid-margin.stretch-card
+        .card
+            .card-body
+                h4.card-title Nouvelle application
+                    form(action="#" method="POST" enctype="multipart/form-data") 
+                        .row
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Titre
+                                    input(type="text" name="title" class="form-control" id="formGroupExampleInput" placeholder="Titre")
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Nom du code
+                                    input(type="text" name="codeName" class="form-control" id="formGroupExampleInput" placeholder="Nom du code")
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Lien
+                                    input(type="text" name="link" class="form-control" id="formGroupExampleInput" placeholder="Lien")
+                        .row
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Auteur
+                                    input(type="text" name="author" class="form-control" id="formGroupExampleInput" placeholder="Auteur")
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Objectif de l'application
+                                    input(type="text" name="reason" class="form-control" id="formGroupExampleInput" placeholder="Objectif de l'application")
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Mentor
+                                    input(type="text" name="mentor" class="form-control" id="formGroupExampleInput" placeholder= "Mentor")
+                        .row
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Image
+                                    input(type="file" name="file" class="form-control" id="formGroupExampleInput")
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Lien de téléchargement
+                                    input(type="text" name="download" class="form-control" id="formGroupExampleInput" placeholder="Lien de téléchargement")
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label catégorie
+                                    input(type="text" name="category" class="form-control" id="formGroupExampleInput" placeholder= "catégorie")
+                        .row
+                            .col-lg-4
+                                .form-group
+                                    label.form-control-label Qualité
+                                    input(type="text" name="quality" class="form-control" id="formGroupExampleInput" placeholder= "Qualité")
+                            .col-lg-8
+                                .form-group
+                                    label.form-control-label Description
+                                    input(type="text" name="description" class="form-control" id="formGroupExampleInput" placeholder="Une brève description de l'appplication")
+                        button(type="submit").btn.btn-block.btn-primary.btn-lg.font-weight-medium.auth-form-btn Ajouter

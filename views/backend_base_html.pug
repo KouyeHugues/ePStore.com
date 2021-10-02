@@ -1,0 +1,35 @@
+extends base_html
+
+block style
+	link(rel='stylesheet', href='/themes/back/vendors/feather/feather.css')
+	link(rel='stylesheet', href='/themes/back/vendors/ti-icons/css/themify-icons.css')
+	link(rel='stylesheet', href='/themes/back/vendors/css/vendor.bundle.base.css')
+	link(rel='stylesheet', href='/themes/back/vendors/datatables.net-bs4/dataTables.bootstrap4.css')
+	link(rel='stylesheet', href='/themes/back/vendors/ti-icons/css/themify-icons.css')
+	link(rel='stylesheet', href='/themes/back/css/vertical-layout-light/style.css')
+	link(rel='stylesheet', href='/themes/back/vendors/mdi/css/materialdesignicons.min.css')
+
+block bodycontent
+	.container-scroller
+		include partials/_navbar_back_html.pug
+		div(class='container-fluid page-body-wrapper')
+			include partials/_sidebar_back_html.pug
+			.main-panel
+				.content-wrapper
+					block content
+				include partials/_footer_back_html.pug
+
+block scripts
+	script(src='/themes/back/vendors/js/vendor.bundle.base.js')
+	script(src='/themes/back/vendors/chart.js/Chart.min.jss')
+	script(src='/themes/back/vendors/datatables.net/jquery.dataTables.js')
+	script(src='/themes/back/vendors/datatables.net-bs4/dataTables.bootstrap4.js')
+	script(src='/themes/back/js/dataTables.select.min.js')
+	script(src='/themes/back/js/off-canvas.js')
+	script(src='/themes/back/js/hoverable-collapse.js')
+	script(src='/themes/back/js/template.js')
+	script(src='/themes/back/js/dashboard.js')
+	script(src='/themes/back/js/Chart.roundedBarCharts.js')
+
+
+

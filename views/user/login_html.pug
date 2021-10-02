@@ -1,0 +1,18 @@
+extends ../auth_base_html.pug
+
+
+block content
+
+	
+	form(action="#" method="POST")
+		h3.text-center Se connecter
+			h4.btn.badge.badge-danger #{msg}
+		.mb-3 
+			label(for="formGroupExampleInput" class="form-label") Email
+			input(type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Email")
+
+		.mb-3 
+			label(for="formGroupExampleInput" class="form-label") Mot de passe
+			input(type="password" name="password" class="form-control" id="formGroupExampleInput" placeholder="Mot de passe")
+
+		button(type="submit").btn.btn-block.btn-primary.btn-lg.font-weight-medium.auth-form-btn Se connecter
